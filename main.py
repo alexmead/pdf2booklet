@@ -10,8 +10,6 @@ from pypdf import PdfReader, PdfWriter
 
 from utils import parse_arguments, blank_page
 
-filename = "toxic_therapy_v0.2.1_booklet.pdf"
-
 
 def main(read_filename, write_filename):
     # Reader and Writer classes
