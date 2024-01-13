@@ -22,14 +22,14 @@ def main(read_filename, write_filename):
     contents = [page for page in reader.pages[1:-1]]
 
     # Build out PDF page list with blanks
-    extra_blanks_needed = len(contents) % 4
+    extra_blanks_needed = 4 - (len(contents) % 4)
     contents += [blank_page for _ in range(0, extra_blanks_needed)]
 
     # Extract the pages in "print order"
     blocks = int(len(contents) / 4)
     ptr_left, ptr_right = 0, -1
     print_order_list = []
-    for block in range(0, blocks):
+    for _ in range(0, blocks):
         print_order_list = [
             contents[ptr_left+1],
             contents[ptr_right-1],

@@ -3,4 +3,7 @@
 /__pycache__
 /.venv
 
+# Don't track .pdf's themselves
+*.pdf
+
 .DS_Store
